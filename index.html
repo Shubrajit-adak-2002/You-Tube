@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <html data-theme="light"></html>
+</head>
+
+<body>
+  <!-- Header -->
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+              </div>
+              <a class="btn btn-ghost text-xl"><img src="Logo.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <button onclick="sortByViews()" class="btn">Sort by view</button>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a onclick="redirect()" class="btn bg-red-500 px-7 text-white">Blog</a>
+            </div>
+          </div>
+    </header>
+    <hr>
+    <main class="container mx-auto my-7">
+        <section>
+            <!-- Video categories -->
+            <div id="v-categories" class="flex gap-4 justify-center">
+            </div>
+            <!-- No data found text -->
+            <div id="no-data" class="my-40 hidden">
+                <div class="flex justify-center">
+                    <img src="Icon.png" alt="">
+                </div>
+                <p class="text-9xl text-center">No Data Found !</p>
+            </div>
+            <!-- Video card container -->
+            <div id="video-conatiner" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            </div>
+        </section>
+    </main>
+    <script src="js/tube.js"></script>
+</body>
+</html>
